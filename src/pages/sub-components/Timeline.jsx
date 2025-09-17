@@ -28,7 +28,7 @@ const Timeline = () => {
     const getMyTimeline = async () => {
       setLoading(true);
       const { data } = await axios.get(
-        "http://localhost:4000/timeline/getall",
+        "https://portfolio-backend-cqyk.onrender.com/timeline/getall",
         {
           withCredentials: true,
         }

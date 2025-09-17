@@ -21,8 +21,8 @@ const Hero = () => {
 
   const handleDownload = () => {
     const link = document.createElement("a");
-    link.href = "/Alok_CV.pdf"; // public folder me PDF ka path
-    link.download = "Alok_CV.pdf"; // download file name
+    link.href = "/Alok_CV.pdf"; 
+    link.download = "Alok_CV.pdf"; 
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -34,7 +34,7 @@ const Hero = () => {
     const getMyProfile = async () => {
       try {
         const { data } = await axios.get(
-          "http://localhost:4000/user/me/portfolio"
+          "https://portfolio-backend-cqyk.onrender.com/user/me/portfolio"
         );
 
         setUser(data?.user);

@@ -14,7 +14,7 @@ const MyApps = () => {
       setLoading(true);
       try {
         const { data } = await axios.get(
-          "http://localhost:4000/application/getall",
+          "https://portfolio-backend-cqyk.onrender.com/application/getall",
           {
             withCredentials: true,
           }

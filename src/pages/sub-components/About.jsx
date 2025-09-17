@@ -18,7 +18,7 @@ const About = () => {
     const getMyProfile = async () => {
       setLoading(true);
       const { data } = await axios.get(
-        "http://localhost:4000/user/me/portfolio"
+        "https://portfolio-backend-cqyk.onrender.com/user/me/portfolio"
       );
 
       setUser(data?.user);
