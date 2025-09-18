@@ -16,7 +16,7 @@ const Contact = () => {
     setLoading(true);
     await axios
       .post(
-        "http://localhost:4000/message/send",
+        "https://dev-alok.up.railway.app/message/send",
         {
           senderName,
           subject,

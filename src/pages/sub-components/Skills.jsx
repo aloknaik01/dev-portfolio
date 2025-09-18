@@ -11,9 +11,12 @@ const Skills = () => {
   useEffect(() => {
     const getMySkills = async () => {
       setLoading(true);
-      const { data } = await axios.get("https://portfolio-backend-cqyk.onrender.com/skill/getall", {
-        withCredentials: true,
-      });
+      const { data } = await axios.get(
+        "https://dev-alok.up.railway.app/skill/getall",
+        {
+          withCredentials: true,
+        }
+      );
       setSkills(data?.allSkill);
       setLoading(false);
     };

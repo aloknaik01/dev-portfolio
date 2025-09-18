@@ -8,7 +8,7 @@ import ProjectView from "./pages/ProjectView";
 import Footer from "./pages/sub-components/Footer";
 import { useEffect, useState } from "react";
 import NoInternet from "./pages/sub-components/NoInternet";
-import { SplineSceneBasic } from "./components/demo";
+
 
 
 function App() {
@@ -31,7 +31,6 @@ function App() {
       <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
         <Router>
           <Routes>
-            <Route path="/demo" element={<SplineSceneBasic />} />
             <Route path="/" element={online ? <Home /> : <NoInternet />} />
             <Route path="/project/:id" element={<ProjectView />} />
           </Routes>

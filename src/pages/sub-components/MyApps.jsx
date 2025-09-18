@@ -14,7 +14,7 @@ const MyApps = () => {
       setLoading(true);
       try {
         const { data } = await axios.get(
-          "https://portfolio-backend-cqyk.onrender.com/application/getall",
+          "https://dev-alok.up.railway.app/application/getall",
           {
             withCredentials: true,
           }
@@ -59,7 +59,7 @@ const MyApps = () => {
             {Array(10)
               .fill(null)
               .map((_, i) => (
-                <Skeleton key={i} className="h-44 w-auto"  />
+                <Skeleton key={i} className="h-44 w-auto" />
               ))}
           </div>
         )}

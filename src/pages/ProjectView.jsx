@@ -18,7 +18,7 @@ const ProjectView = () => {
   useEffect(() => {
     const getProject = async () => {
       axios
-        .get(`http://localhost:4000/project/getone/${id}`, {
+        .get(`https://dev-alok.up.railway.app/project/getone/${id}`, {
           withCredentials: true,
         })
         .then((res) => {

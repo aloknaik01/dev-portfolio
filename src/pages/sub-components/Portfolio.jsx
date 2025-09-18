@@ -12,9 +12,12 @@ const Portfolio = () => {
   useEffect(() => {
     const getMyProjects = async () => {
       setLoading(true);
-      const { data } = await axios.get("https://portfolio-backend-cqyk.onrender.com/project/getall", {
-        withCredentials: true,
-      });
+      const { data } = await axios.get(
+        "https://dev-alok.up.railway.app/project/getall",
+        {
+          withCredentials: true,
+        }
+      );
       setProjects(data?.allProjects);
       setLoading(false);
     };

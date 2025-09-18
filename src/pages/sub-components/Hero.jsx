@@ -13,7 +13,6 @@ import { Link } from "react-router-dom";
 import { Typewriter } from "react-simple-typewriter";
 import { motion } from "framer-motion";
 import { toast } from "react-toastify";
-// import { renderCanvas } from "@/components/ui/canvas";
 
 const Hero = () => {
   const [user, setUser] = useState({});
@@ -21,8 +20,8 @@ const Hero = () => {
 
   const handleDownload = () => {
     const link = document.createElement("a");
-    link.href = "/Alok_CV.pdf"; 
-    link.download = "Alok_CV.pdf"; 
+    link.href = "/Alok_CV.pdf";
+    link.download = "Alok_CV.pdf";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -34,7 +33,7 @@ const Hero = () => {
     const getMyProfile = async () => {
       try {
         const { data } = await axios.get(
-          "https://portfolio-backend-cqyk.onrender.com/user/me/portfolio"
+          "https://dev-alok.up.railway.app/user/me/portfolio"
         );
 
         setUser(data?.user);
@@ -47,10 +46,6 @@ const Hero = () => {
 
     getMyProfile();
   }, []);
-
-  // useEffect(() => {
-  //   renderCanvas();
-  // }, []);
 
   return (
     <>
@@ -171,10 +166,6 @@ const Hero = () => {
 
         <hr className="mt-6 md:mt-10" />
       </div>
-      {/* <canvas
-        className="bg-skin-base pointer-events-none absolute inset-0 mx-auto"
-        id="canvas"
-      ></canvas> */}
     </>
   );
 };

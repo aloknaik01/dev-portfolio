@@ -1,6 +1,4 @@
-import Pic from "@/components/Picture";
 import { Skeleton } from "@/components/ui/skeleton";
-import { SplineScene } from "@/components/ui/splite";
 import {
   Tooltip,
   TooltipContent,
@@ -18,7 +16,7 @@ const About = () => {
     const getMyProfile = async () => {
       setLoading(true);
       const { data } = await axios.get(
-        "https://portfolio-backend-cqyk.onrender.com/user/me/portfolio"
+        "https://dev-alok.up.railway.app/user/me/portfolio"
       );
 
       setUser(data?.user);
@@ -49,17 +47,7 @@ const About = () => {
                 <Tooltip>
                   <TooltipTrigger>
                     {!loading ? (
-                      // <Pic
-                      //   img={user && user?.avatar?.url}
-                      //   className="p-5 sm:p-6 h-[460px] sm:h-[420px] md:h-[440px] lg:h-[500px] rounded-full"
-                      // />
-                      <img src="/Boy.png"/>
-                      // <div className="w-[1000px] h-[500px]">
-                      //   <SplineScene
-                      //     scene="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode"
-                      //     className="w-full h-full"
-                      //   />
-                      // </div>
+                      <img src="/Boy.png" />
                     ) : (
                       <Skeleton className="h-96 w-96 rounded-full" />
                     )}
